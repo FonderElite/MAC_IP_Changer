@@ -48,9 +48,10 @@ except ImportError:
     print(f'{wi}{rd} Missing Modules, Trying to Import')
     print(f'{wi}Checking pip version')
     time.sleep(0.5)
-    pip = os.system('pip --version')
-    if pip:
-        print(f"Pip version is: {pip}")
+    process = sub.Popen('pip --version', shell=True, stdout = -1, stderr=subprocess.STDOUT)
+    out,err = process.communicate()
+    if out:
+        print(f"Pip version is: {out}")
         print(f'{wi}Installing missing modules using pip...')
         time.sleep(0.5)
         os.system('pip install uuid')
@@ -87,6 +88,7 @@ def get_args():
 
 options = get_args()
 change_mac(options.interface,options.mac)
+
 
 
 
