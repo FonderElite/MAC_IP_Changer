@@ -21,8 +21,8 @@ cy = Fore.CYAN
 bk = Fore.CYAN
 mg = Fore.MAGENTA
 path = '/usr/local/lib/python3.8/dist-packages'
-tool = print(f'{wi}MAC && IP Changer')
-owner = print(f'Made By:{wi}{yl}FonderElite, {wi}{gr}a Cyber-Security Student and a Programmer')
+tool = print(f'{wi}{yl}MAC {wi}&& {wi}{yl}IP Changer')
+owner = print(f'{wi}Made By:{wi}{cy}FonderElite, {wi}{gr}a Cyber-Security Student and a Programmer')
 time.sleep(0.5)
 try:
     import subprocess
@@ -88,7 +88,4 @@ def get_args():
 
 options = get_args()
 change_mac(options.interface,options.mac)
-
-
-
-
+                                             
