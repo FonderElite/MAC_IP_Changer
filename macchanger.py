@@ -63,28 +63,16 @@ except ImportError:
     else:
         print(f"{wi}Try Importing it manually")
 
-def change_mac(interface,mac):
-    print(f"Original Mac Address: {wi}{yl}{original_mac}")
-    time.sleep(0.5)
-    print(f'{wi}{gr}[+]{wi}Changing MAC for interface {wi}{yl}{interface} {wi} to {wi}{yl}{mac}')
-    sub.call(['ifconfig',interface,'down'])
-    sub.call(['ifconfig',interface,'hw','ether',mac])
-    sub.call(['ifconfig',interface],'up')
-
-def get_args():
-    parser = optparse.OptionParser()
-    parser.add_option('-i','--interface',dest='interface',help='Specify an interface to change Mac Address, use -h for help')
-    parser.add_option('-m','--mac',dest='mac',help='Specify the New Mac Address, use -h for help')
-#   parser.add_option('-ip','--ip',dest='ipadd', help='Specify the Ip Adress, use -h for help')
-#    parser
-    (options,arguments) = parser.parse_args()
-    if not options.interface:
-        parser.error(wi + rd + '[-]' + wi + 'Please Specify an interface, use -h for help')
-    elif not options.mac:
-        parser.error(wi + rd + '[-]' + wi + 'Please Specify a Mac Address, use -h for help')
-        return options
-    #else:
-        #parser.error(wi + rd + '[-]' + wi + 'Use -h for help')
-
-options = get_args()
-change_mac(options.interface,options.mac)
+def change_mac(interface):
+ try:
+  mac = input("Input a Mac Address: ")
+  print(f"Original Mac Address: {wi}{yl}{original_mac}")
+  time.sleep(0.5)
+  print(f'{wi}{gr}[+]{wi}Changing MAC for interface {wi}{yl}{interface} {wi} to {wi}{yl}{mac}')
+  sub.call(['ifconfig',interface,'down'])
+  sub.call(['ifconfig',interface,'hw','ether',mac])
+  sub.call(['ifconfig',interface],'up')
+ except TypeError:   
+  print(wi + rd + "[-]" + wi + "Error")
+change_mac("eth0")
+                   
