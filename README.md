@@ -1,5 +1,5 @@
-# Mac Ip Changer
-## Installation
+# :octocat: Mac Ip Changer
+## 🔧 Installation
 ```bash
 git clone https://github.com/FonderElite/MAC_IP_Changer
 ```
