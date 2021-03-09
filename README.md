@@ -1,4 +1,4 @@
-# :octocat: Mac Ip Changer
+# 🧅 Mac Ip Changer
 ## 🔧 Installation
 ```bash
 git clone https://github.com/FonderElite/MAC_IP_Changer
@@ -31,7 +31,7 @@ python3 file_name.py
 - [x] Buggy!
 - [x] New
 
-# Open-Source
+# :octocat: Open-Source
 This tool is open source so you can freely use this in your projects but dont copy paste because
 it doesn't make you a good programmer.
 **Commits** to this repo are open and free if you want to contribute to it
