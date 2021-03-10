@@ -3,12 +3,12 @@
 ```bash
 git clone https://github.com/FonderElite/MAC_IP_Changer
 ```
-Before Installing please ensure that you have a module named **module_name**
-This is for the purpose of getting the install.py to work.
-
-## Usage
+## Classic Python
 ```py
-python3 file_name.py
+import subcall as sub
+  sub.call(['sudo', 'ifconfig', interface, 'down'])
+  sub.call(['sudo', 'ifconfig', interface, 'hw', 'ether', new_mac])
+  sub.call(['sudo', 'ifconfig', interface, 'up'])
 ```
 
  # What is an IP Address?
