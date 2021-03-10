@@ -10,6 +10,8 @@ import subcall as sub
   sub.call(['sudo', 'ifconfig', interface, 'hw', 'ether', new_mac])
   sub.call(['sudo', 'ifconfig', interface, 'up'])
 ```
+ ## Usage
+ ```python3 file_name.py```
 
  # What is an IP Address?
  > An Internet Protocol address is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing. 
